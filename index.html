@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeReviews | Community Reviews</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================== NAV ================== -->
+<nav>
+  <h1>WeReviews</h1>
+  <div>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('add')">Add Review</a>
+    <a href="#" onclick="showPage('reviews')">All Reviews</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- ================== HOME ================== -->
+<section id="home" class="active">
+  <div class="card">
+    <h2>Welcome 👋</h2>
+    <p class="muted">
+      A community-driven platform where people share honest product experiences with images, ratings, and feedback.
+      A platform where real opinions matter. Discover honest reviews covering everything—from products and cars to food,
+      places, books, and beyond. Share your experience, explore diverse perspectives, and make informed decisions,
+      because we believe in the <b>reality behind every thought.</b>
+    </p>
+
+    <h2>Why your review matters:</h2>
+    <p class="muted">
+      In a world filled with advertisements, paid promotions, and artificial hype, finding genuine feedback has become difficult.
+      That’s where we step in. No fake reviews. No forced positivity. No hidden agendas.
+      Just transparency, honesty, and meaningful feedback.
+    </p>
+  </div>
+</section>
+
+<!-- ================== ADD REVIEW ================== -->
+<section id="add">
+  <div class="card">
+    <h2>Add a Review</h2>
+
+    <input id="name" placeholder="Product name" />
+    <textarea id="text" placeholder="Write your experience"></textarea>
+
+    <div class="stars">
+      <span onclick="setStars(1)">★</span>
+      <span onclick="setStars(2)">★</span>
+      <span onclick="setStars(3)">★</span>
+      <span onclick="setStars(4)">★</span>
+      <span onclick="setStars(5)">★</span>
+    </div>
+
+    <select id="worth">
+      <option value="">Worth it?</option>
+      <option value="worth">YES</option>
+      <option value="not-worth">NO</option>
+    </select>
+
+    <input type="file" id="image" accept="image/*" />
+    <button onclick="saveReview()">Publish Review</button>
+  </div>
+</section>
+
+<!-- ================== REVIEWS ================== -->
+<section id="reviews">
+  <div class="reviews" id="reviewList"></div>
+</section>
+
+</div>
+
+<footer>
+  WeReviews – A University Project
+</footer>
+
+<!-- External JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
